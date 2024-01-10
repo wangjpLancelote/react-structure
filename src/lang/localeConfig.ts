@@ -1,18 +1,18 @@
-import antdUS from 'antd/lib/locale-provider/en_US'; // 美式英语
-import antdCN from 'antd/lib/locale-provider/zh_CN'; // 简体
-import antdTW from 'antd/lib/locale-provider/zh_TW'; // 繁体
-import antdEG from 'antd/lib/locale-provider/ar_EG'; // 阿拉伯语
-import antdDE from 'antd/lib/locale-provider/de_DE'; // 德语
-import antdGB from 'antd/lib/locale-provider/en_GB'; // 英式英语
-import antdES from 'antd/lib/locale-provider/es_ES'; // 西班牙语
-import antdFR from 'antd/lib/locale-provider/fr_FR'; // 法语(法国)
-import antdFBE from 'antd/lib/locale-provider/fr_BE'; // 法语(比利时)
-import antdIN from 'antd/lib/locale-provider/hi_IN'; // 印地语
-import antdJP from 'antd/lib/locale-provider/ja_JP'; // 日语
-import antdTH from 'antd/lib/locale-provider/th_TH'; // 泰语
-import antdKR from 'antd/lib/locale-provider/ko_KR'; // 朝鲜语
-import antdRU from 'antd/lib/locale-provider/ru_RU'; // 俄语
-import antdID from 'antd/lib/locale-provider/id_ID'; // 印度尼西亚语
+import antdUS from 'antd/locale/en_US'; // 美式英语
+import antdCN from 'antd/locale/zh_CN'; // 简体
+import antdTW from 'antd/locale/zh_TW'; // 繁体
+import antdEG from 'antd/locale/ar_EG'; // 阿拉伯语
+import antdDE from 'antd/locale/de_DE'; // 德语
+import antdGB from 'antd/locale/en_GB'; // 英式英语
+import antdES from 'antd/locale/es_ES'; // 西班牙语
+import antdFR from 'antd/locale/fr_FR'; // 法语(法国)
+import antdFBE from 'antd/locale/fr_BE'; // 法语(比利时)
+import antdIN from 'antd/locale/hi_IN'; // 印地语
+import antdJP from 'antd/locale/ja_JP'; // 日语
+import antdTH from 'antd/locale/th_TH'; // 泰语
+import antdKR from 'antd/locale/ko_KR'; // 朝鲜语
+import antdRU from 'antd/locale/ru_RU'; // 俄语
+import antdID from 'antd/locale/id_ID'; // 印度尼西亚语
 
 import zh_CN from './zh_CN';
 import en_US from './en_US';
@@ -21,7 +21,7 @@ import ar_EG from './ar_EG';
 export type TLanguage = 'zh-CN' | 'en-US' | 'zh-TW' | 'ar-EG' | 'de-DE' | 'en-GB' | 'es-ES' | 'fr-FR' | 'fr-BE' | 'hi-IN' | 'ja-JP' | 'th-TH' | 'ko-KR' | 'ru-RU' | 'id-ID';
 
 /** 针对语言包的多层级 */
-export const compile = function loop (message, pids?) {
+export const compile = function loop (message: any, pids?: any) {
   let result: any = {};
   for (const [ id, msg ] of Object.entries(message)) {
     if (typeof msg === 'object') {
