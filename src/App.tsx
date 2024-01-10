@@ -9,6 +9,8 @@ import { Layout } from 'antd';
 import RouteApp from './RouteApp';
 import { HashRouter } from 'react-router-dom';
 
+const { Footer } = Layout
+
 
 function App() {
   return (
@@ -16,17 +18,18 @@ function App() {
       <HashRouter>
          <ModalProvider>
           <AppWrapper id='app'>
-            <ContentWrapper>
-              <Layout>
-                <LeftMenu/>
-              </Layout>
+            <Layout style={{ height: '100%' }}>
+              <LeftMenu/>
               <Layout>
                 <LayoutHeader/>
                 <LayoutContent>
                   <RouteApp/>
                 </LayoutContent>
+                <Footer style={{ textAlign: 'center' }}>
+                  Ant Design ©{new Date().getFullYear()} Created by Ant UED
+                </Footer>
               </Layout>
-            </ContentWrapper>
+            </Layout>
           </AppWrapper>
         </ModalProvider>
       </HashRouter>

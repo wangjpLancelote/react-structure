@@ -17,7 +17,7 @@ export const LayoutHeader: React.FC = () => {
   } = theme.useToken();
 
   return (
-    <Header style={{ padding: 0, background: colorBgContainer }}>
+    <Header style={{ padding: 0, background: colorBgContainer, display: 'flex', justifyContent: 'flex-start' }}>
       <Button
         type="text"
         icon={ifCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}

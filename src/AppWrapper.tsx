@@ -10,8 +10,9 @@ export const AppWrapper = styled('div')(({ theme }) => ({
 
 export const ContentWrapper = styled('div')(({ theme }) => ({
   width: '100%',
-  display: 'grid',
-  height: '100vh',
+  display: 'flex',
+  height: '100%',
   overflow: 'auto',
-  alignItems: 'center',
+  alignItems: 'flex-start',
+  justifyContent: 'center'
 }))

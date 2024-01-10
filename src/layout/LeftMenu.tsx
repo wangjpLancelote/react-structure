@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const { Sider } = Layout;
-const { Text } = Typography
+const { Text, Title } = Typography
 
 const renderSubMenus = () => {
 
@@ -23,10 +23,11 @@ export const LeftMenu: React.FC = () => {
   }
 
   return (
-    <Sider trigger={null} collapsible collapsed={ifCollapsed}>
-      <div className="demo-logo-vertical" />
+    <Sider trigger={null} theme={ 'light' } collapsible collapsed={ifCollapsed}>
+      <Title>structure</Title>
       <Menu
-        theme="dark"
+        inlineCollapsed={ifCollapsed}
+        theme="light"
         mode="inline"
         defaultSelectedKeys={['1']}
         // items={[
